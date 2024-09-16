@@ -11,6 +11,16 @@ body {
     display: flex;
     gap: 1em;
     margin: 1em;
+
+    font-size: 2vw;
+}
+
+.selection > label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    height: 100%;
 }
 
 .responses-view {
@@ -52,4 +62,8 @@ body {
 
 .D {
     background-color: #007AC8;
+}
+
+.Unsure {
+    background-color: #D5D5D5;
 }
