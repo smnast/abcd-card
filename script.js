@@ -7,4 +7,22 @@ function toggleVisibility(response) {
     } else {
         element.style.display = 'none';
     }
+
+    updateFontSize();
+}
+
+function updateFontSize() {
+    const responses = document.querySelectorAll('.response');
+    
+    let numVisible = 0;
+    responses.forEach((response) => {
+        if (response.style.display === 'flex') {
+            numVisible++;
+        }
+    });
+
+    let fontSize = (20 / numVisible) + 'em';
+    responses.forEach((response) => {
+        response.style.fontSize = fontSize;
+    });
 }
