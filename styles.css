@@ -9,10 +9,10 @@ body {
 
 .selection {
     display: flex;
-    gap: 1em;
+    gap: 2em;
     margin: 1em;
 
-    font-size: 2vw;
+    font-size: calc(1vw + 1vh);
 }
 
 .selection > label {

@@ -26,3 +26,17 @@ function updateFontSize() {
         response.style.fontSize = fontSize;
     });
 }
+
+function scaleCheckbox() {
+    const vw = window.innerWidth / 100;
+    const vh = window.innerHeight / 100;
+    const scaleFactor = (vw + vh) / 20;
+
+    const checkboxes = document.querySelectorAll('.selection > label > input[type=checkbox]');
+    checkboxes.forEach((checkbox) => {
+        checkbox.style.transform = `scale(${scaleFactor})`;
+    });
+}
+
+window.onload = scaleCheckbox;
+window.onresize = scaleCheckbox;
